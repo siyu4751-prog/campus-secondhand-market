@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>校园二手交易平台</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>校园二手交易平台</h1>
+        <p>让闲置物品重新流通，让校园生活更方便</p>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <input type="text" id="searchInput" placeholder="搜索商品，例如：教材、耳机、自行车">
+            
+            <select id="categoryFilter">
+                <option value="全部">全部分类</option>
+                <option value="教材资料">教材资料</option>
+                <option value="数码产品">数码产品</option>
+                <option value="生活用品">生活用品</option>
+                <option value="服装鞋包">服装鞋包</option>
+                <option value="运动器材">运动器材</option>
+                <option value="其他">其他</option>
+            </select>
+        </section>
+
+        <section class="form-section">
+            <h2>发布二手商品</h2>
+
+            <div class="form-box">
+                <input type="text" id="nameInput" placeholder="商品名称">
+                <input type="number" id="priceInput" placeholder="价格，例如：20">
+
+                <select id="categoryInput">
+                    <option value="教材资料">教材资料</option>
+                    <option value="数码产品">数码产品</option>
+                    <option value="生活用品">生活用品</option>
+                    <option value="服装鞋包">服装鞋包</option>
+                    <option value="运动器材">运动器材</option>
+                    <option value="其他">其他</option>
+                </select>
+
+                <input type="text" id="conditionInput" placeholder="新旧程度，例如：八成新">
+                <input type="text" id="contactInput" placeholder="联系方式，例如：微信 xxx">
+                <textarea id="descInput" placeholder="商品描述"></textarea>
+
+                <button onclick="addProduct()">发布商品</button>
+            </div>
+        </section>
+
+        <section class="product-section">
+            <h2>二手商品列表</h2>
+            <div id="productList" class="product-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Campus Market © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
