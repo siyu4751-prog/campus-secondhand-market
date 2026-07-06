@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #4f8cff, #6ed3ff);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.search-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.search-section input,
+.search-section select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.search-section input {
+    flex: 1;
+}
+
+.form-section,
+.product-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #2f5fa8;
+}
+
+.form-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.form-box textarea {
+    grid-column: span 2;
+    height: 90px;
+    resize: none;
+}
+
+.form-box button {
+    grid-column: span 2;
+    padding: 13px;
+    background: #4f8cff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.form-box button:hover {
+    background: #2f6eea;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #e1e5ee;
+    border-radius: 14px;
+    padding: 18px;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.product-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #ff5a5f;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e8f1ff;
+    color: #2f6eea;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    margin: 6px 0;
+    line-height: 1.5;
+}
+
+.delete-btn {
+    margin-top: 12px;
+    width: 100%;
+    padding: 9px;
+    border: none;
+    border-radius: 8px;
+    background: #ff6b6b;
+    color: white;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #e84141;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+
+@media screen and (max-width: 700px) {
+    .search-section {
+        flex-direction: column;
+    }
+
+    .form-box {
+        grid-template-columns: 1fr;
+    }
+
+    .form-box textarea,
+    .form-box button {
+        grid-column: span 1;
+    }
+}
